@@ -47,7 +47,7 @@ The cool thing about zebra is that it's an extension to test/unit. If you have a
 
 == Dependencies
 
-  - jeremymcanally-context
+  - jeremymcanally-context or shoulda
   - jeremymcanally-matchy
   - parse_tree
   - ruby2ruby
