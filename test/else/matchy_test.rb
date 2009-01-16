@@ -1,4 +1,5 @@
-require File.dirname(__FILE__) + '/test_helper'
+require File.dirname(__FILE__) + '/../test_helper'
+require 'context'
 
 class MatchyTest < Test::Unit::TestCase
   it "should alias should to .to" do
