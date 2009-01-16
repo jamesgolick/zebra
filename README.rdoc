@@ -52,7 +52,7 @@ The cool thing about zebra is that it's an extension to test/unit. If you have a
 
 == Inspiration
 
-  {Jay Fields' Expectations}[http://blog.jayfields.com/2007/12/ruby-expectation-gem.html]
+{Jay Fields' Expectations}[http://blog.jayfields.com/2007/12/ruby-expectation-gem.html]
 
 COPYRIGHT
 =========
