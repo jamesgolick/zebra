@@ -17,7 +17,7 @@ Zebra is another tool for testing your rubies.
 
 == Don't see the problem?
 
-Why bother writing self-documenting test code if you always have to explain it to the reader in a glorified comment (test name)? Furthermore, the fact that you do have to explain it discourages the best practice of writing one assertion per test. If the assertion is one line and the code can explain itself, why does the test have to be 3 lines?
+Why bother writing self-documenting test code if you always have to explain it to the reader? {Test names are essentially glorified comments}[http://blog.jayfields.com/2008/05/testing-value-of-test-names.html] and {comments are frequently code smells}[http://memeagora.blogspot.com/2008/11/comments-code-smell.html]. Furthermore, all the extra code required to create a test (should "" do ... end) almost certainly discourages one assertion per test. If the assertion is one line and the code can explain itself, why bother with all the other crap?
 
 == The Solution
 
@@ -34,9 +34,10 @@ Why bother writing self-documenting test code if you always have to explain it t
 
 == But, what about the test name?
 
-I'm glad you asked. This is where zebra gets really cool. The above test will create a test with the following name:
+I'm glad you asked. This is where zebra gets really cool. The above test will create tests with the following names:
 
   test: With a blog post expect @post.to(be_editable_by(@author))
+  test: With a blog post expect @post.not_to(be_editable_by(@author))
 
 Now, *that* is self documenting code.
 
