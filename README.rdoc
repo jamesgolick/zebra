@@ -23,11 +23,13 @@ Why bother writing self-documenting test code if you always have to explain it t
 
   context "With a blog post" do
     setup do
-      @author = create_person
-      @post   = create_post :author => @author
+      @author        = create_person
+      @somebody_else = create_person
+      @post          = create_post :author => @author
     end
 
     expect { @post.to be_editable_by(@author) }
+    expect { @post.not_to be_editable_by(@author) }
   end
 
 == But, what about the test name?
