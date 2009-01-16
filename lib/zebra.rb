@@ -17,3 +17,4 @@ end
 
 Test::Unit::TestCase.send(:extend, Zebra)
 Object.send(:alias_method, :to, :should)
+Object.send(:alias_method, :not_to, :should_not)
