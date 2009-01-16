@@ -12,7 +12,6 @@ begin
     s.description = "TODO"
     s.authors = ["James Golick"]
 
-    s.add_dependency "jeremymcanally-context", ">=0.5.2"
     s.add_dependency "jeremymcanally-matchy", ">=0.0.1"
     s.add_dependency "ParseTree", ">=3.0.2"
     s.add_dependency "ruby2ruby", ">=1.2.1"
