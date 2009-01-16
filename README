@@ -1,9 +1,60 @@
 zebra
 =====
 
-Description goes here.
+Zebra is another tool for testing your rubies.
+
+= The problem
+
+  context "A blog post" do
+    setup do
+      @author = create_person
+      @post   = create_post :author => @author
+    end
+
+    should "be editable by its author" do
+      assert @post.editable_by?(@author)
+    end
+  end
+
+== Don't see the problem?
+
+Why bother writing self-documenting test code if you always have to explain it to the reader in a glorified comment (test name)? Furthermore, the fact that you do have to explain it discourages the best practice of writing one assertion per test. If the assertion is one line and the code can explain itself, why does the test have to be 3 lines?
+
+== The Solution
+
+  context "With a blog post" do
+    setup do
+      @author = create_person
+      @post   = create_post :author => @author
+    end
+
+    expect { @post.to be_editable_by(@author) }
+  end
+
+== But, what about the test name?
+
+I'm glad you asked. This is where zebra gets really cool. The above test will create a test with the follwing name:
+
+  test: With a blog post expect @post.to(be_editable_by(@author))
+
+Now, *that* is self documenting code.
+
+== The right tool for the job
+
+The cool thing about zebra is that it's an extension to test/unit. If you have a test that belongs in a should block, with a big, old-fashioned test name, you can have it. Just use should or it. When you have a short, self-documenting test, use expect. Best of both worlds.
+
+== Dependencies
+
+  - jeremymcanally-context
+  - jeremymcanally-matchy
+  - parse_tree
+  - ruby2ruby
+
+== Inspiration
+
+  {Jay Fields' Expectations}[http://blog.jayfields.com/2007/12/ruby-expectation-gem.html]
 
 COPYRIGHT
 =========
 
-Copyright (c) 2008 James Golick. See LICENSE for details.
+Copyright (c) 2008 {James Golick}[http://jamesgolick.com]. See LICENSE for details.
