@@ -1,6 +1,6 @@
 = Zebra
 
-Zebra is another tool for testing your rubies.
+One line tests without the smells.
 
 = The problem
 
