@@ -1,5 +1,4 @@
-zebra
-=====
+= Zebra
 
 Zebra is another tool for testing your rubies.
 
@@ -33,7 +32,7 @@ Why bother writing self-documenting test code if you always have to explain it t
 
 == But, what about the test name?
 
-I'm glad you asked. This is where zebra gets really cool. The above test will create a test with the follwing name:
+I'm glad you asked. This is where zebra gets really cool. The above test will create a test with the following name:
 
   test: With a blog post expect @post.to(be_editable_by(@author))
 
@@ -54,7 +53,6 @@ The cool thing about zebra is that it's an extension to test/unit. If you have a
 
 {Jay Fields' Expectations}[http://blog.jayfields.com/2007/12/ruby-expectation-gem.html]
 
-COPYRIGHT
-=========
+== COPYRIGHT
 
 Copyright (c) 2008 {James Golick}[http://jamesgolick.com]. See LICENSE for details.
