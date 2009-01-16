@@ -11,6 +11,11 @@ begin
     s.homepage = "http://github.com/giraffesoft/zebra"
     s.description = "TODO"
     s.authors = ["James Golick"]
+
+    s.add_dependency "jeremymcanally-context", ">=0.5.2"
+    s.add_dependency "jeremymcanally-matchy", ">=0.0.1"
+    s.add_dependency "ParseTree", ">=3.0.2"
+    s.add_dependency "ruby2ruby", ">=1.2.1"
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"

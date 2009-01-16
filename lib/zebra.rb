@@ -1,3 +1,6 @@
+require 'test/unit'
+require 'context'
+require 'matchy'
 require 'parse_tree'
 require 'parse_tree_extensions'
 require 'ruby2ruby'
