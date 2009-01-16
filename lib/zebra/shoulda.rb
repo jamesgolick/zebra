@@ -34,7 +34,7 @@ module Zebra
     end
 
     def build_with_expects
-      expects.each { |e| create_test_from_expect(&e) }
+      (expects || []).each { |e| create_test_from_expect(&e) }
       build_without_expects
     end
   end

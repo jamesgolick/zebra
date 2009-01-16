@@ -17,4 +17,10 @@ class ShouldaTest < Test::Unit::TestCase
       assert self.respond_to?("test: in a context expect true"), self.class.instance_methods.grep(/test/).inspect
     end
   end
+
+  context "A context with no expects" do
+    should "not raise any exceptions" do
+      true
+    end
+  end
 end
