@@ -16,4 +16,4 @@ module Zebra
 end
 
 Test::Unit::TestCase.send(:extend, Zebra)
-
+Object.send(:alias_method, :to, :should)
