@@ -8,7 +8,7 @@ require File.dirname(__FILE__) + '/zebra/shoulda'
 module Zebra
   class << self
     def shoulda?
-      defined?(Thoughtbot)
+      defined?(Shoulda)
     end
   end
 
@@ -18,13 +18,13 @@ module Zebra
 
   protected
     def expect_shoulda(&block)
-      Thoughtbot::Shoulda::Context.send(:include, Zebra::Shoulda) unless Thoughtbot::Shoulda::Context.include?(Zebra::Shoulda)
+      Shoulda::Context.send(:include, Zebra::ShouldaSupport) unless Shoulda::Context.include?(Zebra::ShouldaSupport)
 
-      if Thoughtbot::Shoulda.current_context
-        Thoughtbot::Shoulda.current_context.expect(&block)
+      if Shoulda.current_context
+        Shoulda.current_context.expect(&block)
       else
         context_name = self.name.gsub(/Test/, "")
-        context      = Thoughtbot::Shoulda::Context.new(context_name, self) do
+        context      = Shoulda::Context.new(context_name, self) do
           expect(&block)
         end
         context.build

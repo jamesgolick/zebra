@@ -1,5 +1,5 @@
 module Zebra
-  module Shoulda
+  module ShouldaSupport
     def self.included(klass)
       klass.class_eval do
         attr_accessor :expects

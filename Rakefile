@@ -7,10 +7,10 @@ begin
   Jeweler::Tasks.new do |s|
     s.name = "zebra"
     s.summary = "TODO"
-    s.email = "james@giraffesoft.ca"
-    s.homepage = "http://github.com/giraffesoft/zebra"
+    s.email = "joshngru@gmail.com"
+    s.homepage = "http://github.com/joshng/zebra"
     s.description = "TODO"
-    s.authors = ["James Golick"]
+    s.authors = ["James Golick", "Josh Gruenberg"]
 
     s.add_dependency "jeremymcanally-matchy", ">=0.0.1"
     s.add_dependency "ParseTree", ">=3.0.2"
